@@ -1,0 +1,172 @@
+
+.uml-dragging {
+  cursor: default;
+  user-select: none;
+}
+.uml-container {
+  position: relative;
+}
+.uml-pages {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  background: #f0f0f0;
+}
+.uml-page {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+.uml-page.active {
+  display: block;
+}
+.uml-page.updating .uml-link {
+  visibility: hidden;
+}
+
+/* RECT */
+
+.uml-rect {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  max-width: 200px;
+  border: 1px solid #ccc;
+  background: #fff;
+  z-index: 1;
+  user-select: none;
+}
+.uml-rect-title {
+  padding: 5px 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+}
+.uml-rect-body {
+  /*max-height: 200px;
+  overflow: auto;*/
+}
+.active.uml-rect {
+  border-color:#a80;
+  background: #fafaf0;
+  color: #840;
+  z-index: 999;
+}
+.active.uml-rect .uml-rect-head {
+  background: #ffd;
+}
+.active.uml-rect-attr {
+  color:#200;
+  background:#ffe0c0;
+}
+
+.active.uml-draggable.uml-rect .uml-draggable-touch {
+  cursor: move;
+}
+
+.uml-rect-attr {
+  border-top: 1px solid #eee;
+}
+.uml-rect-attr:first-child {
+  border-top-color: #ddd;
+}
+.uml-rect-attr-title {
+  padding: 3px 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+}
+
+.active.uml-rect .uml-rect-attr-title {
+  cursor: pointer;
+}
+
+.uml-state-rect,
+.uml-transition-rect {
+  max-width: 250px;
+}
+.uml-state-rect {
+  border-color:#08a;
+  background: #f0f8ff;
+  color:#048;
+}
+.uml-state-rect .uml-rect-title {
+  padding: 8px 8px;
+  font-size: 13px;
+  white-space: normal;
+}
+.uml-transition-rect {
+  border-color:#0a0;
+  background: #f0fff0;
+  color:#060;
+}
+.uml-transition-rect,
+.uml-transition-rect .uml-rect-head {
+  border-radius: 16px;
+}
+.uml-transition-rect .uml-rect-title {
+  padding: 8px 12px;
+  font-weight: normal;
+  font-size: 13px;
+  white-space: normal;
+}
+
+/* LINK */
+
+.uml-link {
+  position: absolute;
+  left:0;
+  top:0;
+  height: 1px;
+  background: #444;
+  z-index: 0;
+}
+.uml-link-arrow {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  font-size: 11px;
+  color: #444;
+}
+.uml-link-flip .uml-link-arrow {
+  transform: rotate(180deg);
+}
+
+.uml-ref-link {
+  background: #0c0;
+}
+.uml-ref-link .uml-link-arrow {
+  top: -6px;
+  font-size: 12px;
+  color: #0c0;
+}
+.uml-ref-link.uml-link-flip .uml-link-arrow {
+  top:-5px;
+}
+
+.uml-collection-link {
+  background: #08f;
+}
+.uml-collection-link .uml-link-arrow {
+  top: -6px;
+  font-size: 12px;
+  color: #08f;
+}
+.uml-collection-link.uml-link-flip .uml-link-arrow {
+  top:-5px;
+}
+
+.studio-workflow-uml .uml-link-arrow {
+  top: -6px;
+  font-size: 13px;
+}

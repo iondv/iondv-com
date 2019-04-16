@@ -1,0 +1,98 @@
+<%
+const mod = `${module}/${portal}`;
+%>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=900px,user-scalable=no">
+  <base id="baseUrl" href="<%= baseUrl %>">
+
+  <% if (typeof query === 'undefined' || !query.headContent) { %>
+    <title>IONDV. Framework</title>
+  <% } else { %>
+    <%- query.headContent %>
+  <% } %>
+
+  <link rel="icon" href="<%= mod %>/images/favicon.svg">
+
+  <link href="<%- mod %>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<%- mod %>/vendor/font-awesome-min/css/font-awesome.min.css" rel="stylesheet">
+  <link href="<%- mod %>/vendor/icheck/skins/flat/flat.css" rel="stylesheet">
+  <link href="<%- mod %>/vendor/select2/css/select2.min.css" rel="stylesheet">
+  <link href="<%- mod %>/vendor/jquery-ui/themes/base/jquery-ui.min.css" rel="stylesheet">
+
+  <%- stylesheets %>
+
+  <link href="<%- mod %>/css/styles.css" rel="stylesheet">
+
+  <!-- Preload -->
+  <link rel="preload" as="font" href="<%- mod %>/fonts/robotomono.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="<%- mod %>/fonts/gabriel_sans_black-webfont.woff2"  type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="<%- mod %>/fonts/fa-solid-900.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="<%- mod %>/fonts/fa-brands-400.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="<%- mod %>/fonts/fa-regular-400.woff2" type="font/woff2" crossorigin="anonymous">
+
+  <link rel="preload" as="image" href="<%- mod %>/images/bg-usefor-dev.jpg" crossorigin="anonymous">
+  <link rel="preload" as="image" href="<%- mod %>/images/bg-usefor-startup.jpg" crossorigin="anonymous">
+  <link rel="preload" as="image" href="<%- mod %>/images/bg-usefor-company.jpg" crossorigin="anonymous">
+  <link rel="preload" as="image" href="<%- mod %>/images/favicon.svg" crossorigin="anonymous">
+
+  <link rel="preload" as="font" href="<%- mod %>/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff2" type="font/woff2" crossorigin="anonymous">
+</head>
+
+<body>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(52933891, "init", {
+    clickmap:true,
+    trackLinks:true,
+    accurateTrackBounce:true,
+    webvisor:true
+  });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/52933891" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!-- IONDV. Apps monitoring -->
+<div><img src="https://mc.iondv.com/watch/github/iondv-com" style="position:absolute; left:-9999px;" alt="" /></div>
+<!-- /IONDV. Apps monitoring -->
+
+<div class="wrapper">
+
+  <%- body -%>
+
+</div>
+
+<div id="global-loader" class="global-loader"><span class="fa fa-refresh fa-spin"></span></div>
+
+<script src="<%- mod %>/vendor/jquery/jquery.min.js"></script>
+<script src="<%- mod %>/vendor/js-cookie/src/js.cookie.js"></script>
+<script src="<%- mod %>/vendor/store-js/store.min.js"></script>
+<script src="<%- mod %>/vendor/jquery-ui/jquery-ui.min.js"></script>
+<script>$.widget.bridge('uibutton', $.ui.button);</script>
+<script src="<%- mod %>/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="<%- mod %>/vendor/moment/moment-with-locales.min.js"></script>
+<script src="<%- mod %>/vendor/icheck/icheck.min.js"></script>
+<script src="<%- mod %>/vendor/select2/js/select2.min.js"></script>
+<script src="<%- mod %>/vendor/jquery.inputmask/min/jquery.inputmask.bundle.min.js"></script>
+<script src="<%- mod %>/vendor/jquery.inputmask/min/inputmask/inputmask.extensions.min.js"></script>
+<script src="<%- mod %>/vendor/jquery.inputmask/min/inputmask/inputmask.numeric.extensions.min.js"></script>
+<script src="<%- mod %>/vendor/jquery.inputmask/min/inputmask/inputmask.date.extensions.min.js"></script>
+<script src="<%- mod %>/vendor/jszip/jszip.min.js"></script>
+<script src="<%- mod %>/vendor/jszip-utils/jszip-utils.min.js"></script>
+
+<%- scripts %>
+
+<script src="<%- mod %>/js/helper.js"></script>
+<script src="<%- mod %>/js/scripts.js"></script>
+
+
+<%- pageEndContent %>
+</body>
+</html>

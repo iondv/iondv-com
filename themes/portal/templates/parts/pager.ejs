@@ -1,0 +1,21 @@
+<%
+const mod = `${module}/${portal}`;
+const current = pager.current;
+const total = pager.total;
+const url = pager.url;
+%>
+
+<% if (total > 1) { %>
+  <nav class="text-center">
+    <ul class="pagination">
+      <li><a href="<%- url(1) %>"><span>&lsaquo;</span></a></li>
+      <% for (let page = 1; page <= total; ++page) { %>
+      <% if (page === current) { %>
+        <li class="active"><span><%- page %></span></li>
+      <% } else { %>
+        <li><a href="<%- url(page) %>"><%- page %></a></li>
+      <% }} %>
+      <li><a href="<%- url(total) %>"><span>&rsaquo;</span></a></li>
+    </ul>
+  </nav>
+<% } %>

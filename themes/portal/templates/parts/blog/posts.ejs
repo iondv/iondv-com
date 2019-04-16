@@ -1,0 +1,24 @@
+<%
+const mod = `${module}/${portal}`;
+%>
+<div class="article-list mb40">
+
+  <div class="article-list-content">
+
+    <% if (!items.length) { %>
+
+      <div class="alert alert-warning">
+        Sorry, there are no blog posts...
+      </div>
+
+    <% } else { %>
+
+    <% for (let item of items) { %>
+      <%- partial('./list-post', {item}) %>
+    <% }} %>
+
+  </div>
+
+  <%- partial('../pager') %>
+
+</div>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="148.09312mm"
+   height="145.06223mm"
+   viewBox="0 0 524.73942 514.00001"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="favicon.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-205.17809"
+     inkscape:cy="176.79582"
+     inkscape:document-units="px"
+     inkscape:current-layer="g4143"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-90.17809,-195.15802)">
+    <g
+       id="g4160"
+       transform="translate(101.91753,196.15802)">
+      <g
+         id="g4138">
+        <title
+           id="title4140">background</title>
+        <rect
+           id="canvas_background"
+           height="514"
+           width="514"
+           y="-1"
+           x="-1"
+           style="fill:none" />
+      </g>
+      <g
+         id="g4143">
+        <title
+           id="title4145">Layer 1</title>
+        <path
+           d="m -11.73944,13.6184 c 2.86353,1.43176 9.20799,3.26418 17.18114,5.01117 12.76088,2.79602 30.07266,4.23936 51.54343,6.44292 13.60542,1.39634 40.09353,3.25948 52.25929,3.57941 13.61586,0.35806 23.63146,1.04714 33.6464,1.43176 9.32707,0.35821 20.05727,0.36064 25.05584,0.71588 5.04931,0.35884 12.12554,1.78848 16.46525,2.14764 7.84787,0.64951 16.46527,0 24.33995,0 l 5.01117,0"
+           id="svg_22"
+           fill-opacity="null"
+           stroke-opacity="null"
+           stroke-width="null"
+           stroke="null"
+           inkscape:connector-curvature="0"
+           style="fill:none" />
+        <text
+           stroke="null"
+           transform="matrix(1.4118902,0,0,1.4951369,-20.078688,-37.439634)"
+           font-weight="bold"
+           xml:space="preserve"
+           font-size="206"
+           id="svg_40"
+           y="198.24728"
+           x="14.070973"
+           stroke-opacity="null"
+           style="font-weight:bold;font-size:206px;font-family:Helvetica, Arial, sans-serif;text-anchor:start;fill:#ff9600;fill-opacity:1;stroke-width:0">ION</text>
+        <text
+           font-weight="bold"
+           xml:space="preserve"
+           font-size="207"
+           id="svg_41"
+           y="418.84818"
+           x="233.44656"
+           stroke-opacity="null"
+           transform="matrix(1.4068833,0,0,1.4842747,-275.52585,-121.94583)"
+           stroke="null"
+           style="font-weight:bold;font-size:207px;font-family:Helvetica, Arial, sans-serif;text-anchor:start;fill:#ff9601;fill-opacity:1;stroke-width:0">DV</text>
+      </g>
+    </g>
+  </g>
+</svg>

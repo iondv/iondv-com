@@ -1,0 +1,9 @@
+users:
+  - id: admin
+    name: Администратор
+    pwd:
+      hash: >-
+        pbkdf2$10000$d6ae591cc86f9c3616a6b78026009819bb8bf2cf04604fb9dc022a63e3f4fa617a9976ee17fdb4b587c1e2bb5183b3d1ed9ab1649cc5224bb7ad31c9af2f6285$029d6168d764959ff82f211be128615856a76266cab448e3b312133de9ca0a951b38e1d30090c586d9b9ab55fe17109690626e7e02e4def8b162558ad4acf53d
+    type: local
+    roles:
+      - Admins

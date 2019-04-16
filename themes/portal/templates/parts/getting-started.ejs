@@ -1,0 +1,20 @@
+<%
+const mod = `${module}/${portal}`;
+const _active = typeof active !== 'undefined' ? 'active' : '';
+%>
+<div class="demo-request-btn btn-group">
+  <a href="<%- module %>/get-it" type="button" class="btn-white btn <%- _active %>">
+    Get it Free
+  </a>
+  <button type="button" class="dropdown-toggle btn-white btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="<%- module %>/get-it#git">Git clone</a></li>
+    <li><a href="<%- module %>/get-it#docker">Docker pull</a></li>
+    <li><a href="<%- module %>/get-it#zip">Download zip</a></li>
+    <li><a href="<%- module %>/get-it#demo">Demo</a></li>
+
+    <!--li><a href="< %- module % >/get-it#wininst">Windows installer</a></li-->
+  </ul>
+</div>

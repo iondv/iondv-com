@@ -1,0 +1,66 @@
+<%
+let params = {
+  'serviceUrl': '' //moduleParams.exportAppServiceUrl
+};
+%>
+<div id="export-modal" class="modal" role="dialog" aria-hidden="true"
+     data-params="<%= JSON.stringify(params) %>">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title l10n">Try application</h4>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-alert alert">
+          <button type="button" class="close"><span aria-hidden="true">×</span></button>
+          <div class="alert-content"></div>
+        </div>
+
+        <p>
+          <b>
+            Some common Description
+          </b>
+        </p>
+
+        <div class="modal-loader">
+          <span class="fa fa-refresh fa-spin"></span>
+        </div>
+
+        <div class="mt10" data-section="new">
+          <div class="alert alert-info">
+            Your application is ready to export.
+          </div>
+        </div>
+
+        <div class="mt30" data-section="progress">
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 0;"></div>
+          </div>
+          <p>
+            Your app has almost taken off! Please wait a few minutes...
+          </p>
+        </div>
+
+        <div class="mt10" data-section="ready">
+          <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" style="width: 100%;">
+              100%
+            </div>
+          </div>
+          <div class="alert alert-info">
+            You app has been deployed. Are you ready for joy?
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="form-export btn btn-primary l10n">Export</button>
+        <a href="#" class="form-ready btn btn-success l10n" target="_blank">Ready</a>
+        <button type="button" class="form-abort btn btn-danger l10n">Abort</button>
+        <button type="button" class="form-cancel btn btn-default l10n">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<%
+let mod = `${module}/${portal}`;
+let header = item.get('header');
+let description = item.get('subHeader');
+let url = `${hostUrl}${baseUrl}${module}/blog/post/${item.id}`; // absolute url
+let cover = item.get('cover');
+cover = cover ? `${hostUrl}${cover.link}` : ''; // absolute url
+%>
+
+<title>
+  <%= header %> - Blog IONDV. Framework
+</title>
+
+<meta name="description" content="<%= description %>">
+<meta name="keywords" content="<%= item.get('keywords') %>">
+
+<meta property="og:title" content="Blog IONDV. Framework: <%= header %>" />
+<meta property="og:description" content="<%= description %>" />
+<meta property="og:url" content="<%= url %>" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Blog IONDV. Framework" />
+
+<meta property="twitter:title" content="Blog IONDV. Framework: <%= header %>" />
+<meta property="twitter:description" content="<%= description %>" />
+<meta property="twitter:site" content="@IONDV.Framework" />
+
+<% if (cover) { %>
+<meta property="og:image" content="<%= cover %>" />
+<meta property="twitter:image" content="<%= cover %>" />
+<meta property="twitter:card" content="summary_large_image" />
+<% } %>

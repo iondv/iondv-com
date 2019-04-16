@@ -1,0 +1,28 @@
+**/.eslintrc.yml
+.eslinignore
+.editorconfig
+.gitignore
+.npmignore
+.tern-project
+**/.git/**
+/.git-*/**
+**/package-lock.json
+/changelog*
+# Documents
+/docs/**
+# Log
+/log/**
+# Tests
+/test/**
+# Core frontend library
+/view/default/vendor
+/view/default/node_modules
+# Registry frontend library
+/modules/registry/view/default/vendor
+/modules/registry/view/default/node_modules
+# Portal frontend library
+/modules/portal/view/default/vendor
+/modules/portal/view/default/node_modules
+# Apps frontend library
+/applications/themes/portal/vendor
+/applications/themes/portal/node_modules

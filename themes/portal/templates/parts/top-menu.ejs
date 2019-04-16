@@ -1,0 +1,8 @@
+<%
+  let _currentPage = typeof currentPage !== 'undefined' ? currentPage : null;
+%>
+<div class="nav-menu hidden-xs">
+  <a href="<%- module %>/index#page-about">About</a>
+  <a href="<%- module %>/index#page-try">Try</a>
+  <a class="<%- _currentPage === 'blog' ? 'active' : '' %>" href="<%- module %>/blog">Blog</a>
+</div>

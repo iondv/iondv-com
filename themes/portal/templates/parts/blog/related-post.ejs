@@ -1,0 +1,29 @@
+<%
+let mod = `${module}/${portal}`;
+let header = item.get('header');
+let url = `${module}/blog/post/${item.id}`;
+let cover = item.get('cover');
+let coverText = item.get('coverText');
+%>
+<div class="col-md-4">
+  <a href="<%- url %>">
+    <div class="row">
+      <% if (cover) { %>
+      <div class="col-sm-5">
+        <img src="<%- cover.thumbnails.medium.link %>" alt="<%= coverText %>">
+      </div>
+      <div class="col-sm-7">
+        <div class="related-article-title">
+          <%- header %>
+        </div>
+      </div>
+      <% } else { %>
+      <div class="col-sm-12">
+        <div class="related-article-title">
+          <%- header %>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </a>
+</div>

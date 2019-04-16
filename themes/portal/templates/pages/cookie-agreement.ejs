@@ -1,0 +1,92 @@
+<%
+let mod = `${module}/${portal}/`;
+%>
+<% layout('../layouts/main') -%>
+
+<div class="base dark">
+
+  <div class="nav">
+    <a href="<%- module %>/index" class="logo-light logo" title="IONDV Framework">
+      <div class="logo-ion">ION</div>
+      <div class="logo-dv">DV</div>
+      <div class="logo-framework">Framework</div>
+    </a>
+
+    <div class="nav-menu hidden-xs">
+      <a href="<%- module %>/index#page-about">About</a>
+      <a href="<%- module %>/index#page-try">Try</a>
+      <a href="<%- module %>/blog">Blog</a>
+    </div>
+  </div>
+
+  <div class="page page-privacy">
+    <div class="page-content">
+      <div class="container">
+        <h1 class="page-title mb30">
+          Cookie agreement
+        </h1>
+        <div class="page-article">
+          <p>
+            A cookie is a small data file that is sent to your computer or other device from a website and is stored
+            in your computer's hard drive when you visit that website.
+          </p><p>
+            There are different types of cookies which are used to do different things.
+            These include letting you navigate between different pages on a website efficiently,
+            remembering preferences you have given and helping us to identify ways to improve
+            your overall site experience. Others are used to provide you with advertising which
+            is more tailored to your interests, or to measure the number of site visits and
+            the most popular pages users visit.
+          </p><p>
+            Broadly, there are two different types of browser cookie, (i) session cookies, which are stored
+            in the computer's memory during a user's browsing session and are automatically deleted from your
+            computer when the browser is closed or the session is deemed to have ended;
+            and (ii) persistent cookies, which are stored on the user's computer and are not deleted when the browser
+            is closed. Persistent cookies can be used to retain user preferences for a particular website,
+            allowing those preferences to be used in future browsing sessions.
+          </p><p style="padding-top:20px; padding-bottom:10px; font-size: 1.2em;">
+            Why do we use cookies
+          </p><p>
+            Cookies enable us to customise our website and what we offer you so we can deliver a better online service.
+          </p><p style="padding-top:20px; padding-bottom:10px; font-size: 1.2em;">
+            We use cookies to remember your choices:
+          </p>
+          <ul>
+            <li>Whether you are logged in to your account</li>
+            <li>Browser settings and plug ins</li>
+            <li>Storing information about usage of our website</li>
+          </ul>
+          <p style="padding-top:20px; padding-bottom:10px; font-size: 1.2em;">
+            Sharing of data from cookies
+          </p><p>
+            We will not sell or share your personal information to third parties.
+          </p><p style="padding-top:20px; padding-bottom:10px; font-size: 1.2em;">
+            How can you control the use of cookies?
+          </p><p>
+            Most web browsers automatically accept cookies and your use of this website constitutes your consent
+            to this website setting cookies on your computer of other device.
+          </p><p>
+            It is possible to disable cookies on most web browsers.
+            We recommend that if you do not want this website to set cookies on your computer or other device
+            you should either not use the site and delete any cookies that may have already been placed,
+            or change the settings in your website browser to disable cookies.
+            However, because cookies allow you to take advantage of some of this website's essential features,
+            we recommend you leave them turned on.
+          </p>
+        </div>
+
+        <div class="text-center mt30 mb30">
+          <a href="<%- module %>" class="btn btn-lg btn-default" data-cookie-agree>
+            Agree
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- partial('../parts/footer') %>
+
+</div>
+
+<%- partial('../parts/side-panel') %>
+
+<%- partial('../parts/getting-started') %>

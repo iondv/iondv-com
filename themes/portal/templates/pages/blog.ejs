@@ -1,0 +1,36 @@
+<%
+let mod = `${module}/${portal}/`;
+%>
+<% layout('../layouts/main') -%>
+
+<div class="base">
+
+  <div class="nav">
+    <%- partial('../parts/logo') %>
+    <%- partial('../parts/top-menu', {
+      currentPage: 'blog'
+    }) %>
+  </div>
+
+  <h1 class="page-title page-title-single text-orange">
+    IONDV. Framework Blog
+  </h1>
+
+  <div id="page-articles" class="page-articles page">
+    <div class="page-section">
+      <div class="container">
+
+          <%- partial('../parts/blog/posts') %>
+
+      </div>
+    </div>
+
+  </div>
+
+  <%- partial('../parts/footer') %>
+
+</div>
+
+<%- partial('../parts/side-panel') %>
+<%- partial('../parts/getting-started') %>
+<%- partial('../parts/cookie-notify') %>

@@ -1,0 +1,45 @@
+<%
+let mod = `${module}/${portal}`;
+let header = item.get('header');
+let url = `${module}/blog/post/${item.id}`;
+let cover = item.get('cover');
+let coverText = item.get('coverText');
+%>
+<div class="article">
+  <h2>
+    <a href="<%- url %>">
+      <%- header %>
+    </a>
+  </h2>
+
+  <div class="article-date">
+    <%- moment(item.get('datePublish')).format('MMM DD YYYY') %>
+  </div>
+
+  <% if (cover) { %>
+  <div class="article-image">
+    <img src="<%- cover.link %>" alt="<%= coverText %>">
+  </div>
+  <% } %>
+
+  <div class="article-intro">
+    <%- item.get('subHeader') %>
+  </div>
+
+  <div class="article-footer">
+    <div class="row">
+      <div class="col-sm-6">
+
+        <%- partial('./share', {item}) %>
+
+      </div>
+      <div class="col-sm-6">
+        <div class="article-continue">
+          <a href="<%- url %>">
+            Continue reading...
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

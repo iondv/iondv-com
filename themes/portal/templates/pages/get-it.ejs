@@ -1,0 +1,45 @@
+<%
+let mod = `${module}/${portal}/`;
+%>
+<% layout('../layouts/main') -%>
+
+<div class="base dark">
+
+  <div class="nav">
+    <%- partial('../parts/logo') %>
+    <%- partial('../parts/top-menu') %>
+  </div>
+
+  <div id="page-slider" class="page-get-it page-slider carousel slide"
+       data-ride="carousel"
+       data-interval="0">
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active">
+        <%- partial('../parts/get-it/slide-1') %>
+      </div>
+
+      <div class="item">
+        <%- partial('../parts/get-it/slide-2') %>
+      </div>
+
+      <div class="item">
+        <%- partial('../parts/get-it/slide-3') %>
+      </div>
+
+    </div>
+
+    <a class="left carousel-control" href="#page-slider" role="button" data-slide="prev">
+      <span class="icon-prev" aria-hidden="true"></span>
+    </a>
+    <a class="right carousel-control" href="#page-slider" role="button" data-slide="next">
+      <span class="icon-next" aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <%- partial('../parts/footer') %>
+</div>
+
+<%- partial('../parts/side-panel') %>
+<%- partial('../parts/getting-started', {active: true}) %>
+<%- partial('../parts/cookie-notify') %>

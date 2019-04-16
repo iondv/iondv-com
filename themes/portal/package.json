@@ -1,0 +1,30 @@
+{
+  "name": "apps-iondv-com-portal-themes",
+  "version": "1.0.0",
+  "description": "Frontend packages for apps iondv.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iondv/iondv-com.git"
+  },
+  "license": "Apache-2.0",
+  "vendorDir": "./static/vendor",
+  "bowerOtherVersionDependencies": {
+    "bootstrap": "3.3.5",
+    "ionicons": "^4.5.5",
+    "jquery.inputmask": "^3.3.4",
+    "jquery-ui": "^1.12.1",
+    "store-js": "^2.0.4"
+  },
+  "dependencies": {
+    "ace-builds": "^1.4.2",
+    "file-saver": "^2.0.0",
+    "icheck": "^1.0.2",
+    "jquery": "^2.2.4",
+    "js-cookie": "^2.2.0",
+    "jszip": "^3.1.5",
+    "jszip-utils": "0.0.2",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.23",
+    "select2": "^4.0.6-rc.1"
+  }
+}

@@ -1,0 +1,312 @@
+<%
+let mod = `${module}/${portal}/`;
+%>
+<% layout('../layouts/main') -%>
+
+<div class="base">
+
+  <div class="nav">
+
+    <%- partial('../parts/logo') %>
+
+    <div class="nav-menu">
+      <a href="#" data-scroll-to="#page-about">About</a>
+      <a href="#" data-scroll-to="#page-try">Try</a>
+      <a href="<%- module %>/blog">Blog</a>
+    </div>
+  </div>
+
+  <div id="page-home" class="page page-home">
+    <div class="page-content">
+      <h1 class="page-title">
+        Rapid  business application development<br />
+        based on metadata and open source JavaScript
+      </h1>
+      <h1 class="page-title-iondv">
+        IONDV. Framework
+      </h1>
+    </div>
+  </div>
+
+
+  <div id="page-make" class="page page-about">
+    <div class="page-section">
+      <div class="container">
+
+        <h1 class="page-title text-black mb40">
+          Easy to create web software for:
+        </h1>
+        <div class="row">
+          <div class="col-sm-3 text-black">
+            <i class="far fa-check-square text-orange fs185"></i>
+          </div>
+          <div class="col-sm-9">
+            <ul class="numeric-list">
+              <li class="text-dark">
+                  <span class="num">01.</span>Document, Resource and Workflow Management
+              </li>
+              <li class="text-dark">
+                  <span class="num">02.</span>Accounting and Reporting
+              </li>
+              <li class="text-dark">
+                  <span class="num">03.</span>Data Mining and Business Intelligence
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <h4 class="text-center text-black fs20 mt30">
+          Install one of the ready-to-use free apps or customize your new one.
+        </h4>
+
+        <h2 class="text-center text-black mt30">
+          <a class="text-orange" href="<%- module %>/get-it">Get it.</a>
+          Deploy it.
+          Work it.
+        </h2>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div id="page-using-for" class="page-using-for" data-active="development">
+    <div class="backgrounds">
+      <div class="background development"></div>
+      <div class="background startup"></div>
+      <div class="background company"></div>
+    </div>
+    <div class="page-content">
+      <div class="page-menu">
+        <a href="javascript:void(0)" class="a-using-for active" data-id="development">Developer</a>
+        <a href="javascript:void(0)" class="a-using-for" data-id="startup">Startup</a>
+        <a href="javascript:void(0)" class="a-using-for" data-id="company">Company</a>
+      </div>
+    </div>
+    <div class="page-section development">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h1 class="page-title-using-for">
+              Using for
+            </h1>
+            <h2 class="section-title mt0 mb30">
+              Developer
+            </h2>
+            <div class="section-super-title mb15 fs16">
+              Optimize Your Performance
+            </div>
+            <div class="fs15">
+              <p>
+                Try our <nobr>IONDV. Framework</nobr> in your daily work to find it indispensable
+                in accomplishing your routine issues faster with a good result.
+              </p><p>
+                The significant advantages of the <nobr>IONDV. Framework</nobr> are the domain driven design paradigm and 
+                concept of the declarative programming with the 
+                JS language and RAD & DevOps technologies.
+              </p><p>
+
+              </p>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <ul class="numeric-list">             
+              <li class="text-dark">
+                <span class="num">01.</span>Just describe a data model and business logic as metadata in JSON or YAML format.
+              </li>
+              <li class="text-dark">
+                <span class="num">02.</span>Gain built-in access control (list based and data based) 
+                to data and more than 300+ authorization strategies (passport.js).
+              </li>
+              </li>
+              <li class="text-dark">
+                <span class="num">03.</span>Get full featured CRUD Web UI - 
+                powerful REST API and SOAP web-service for integration and SPA.
+              </li>
+              <li class="text-dark">
+                <span class="num">04.</span>Functional modules will provide your apps 
+                with ready to work UI: registry, report, dashboard, charts, etc.
+              </li>
+              <li class="text-dark">
+                <span class="num">05.</span>Independent data model, core API, 
+                functional modules and views templates are coupled with fully cross-platform running on NodeJS and MongoDB.
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <div class="btn-list mt15">
+              <a href="https://github.com/iondv/framework" class="btn btn-gray" target="_blank">
+                GitHub Framework
+              </a>
+              <a href="https://github.com/iondv/framework/blob/master/docs/en/index.md" class="btn btn-gray" target="_blank">
+                Docs
+              </a>
+              <a href="https://hub.docker.com/r/iondv/dnt" class="btn btn-gray" target="_blank">
+                Docker Developer Demo apps
+              </a>
+              <a href="https://dnt.demo.iondv.com" class="btn btn-gray" target="_blank">
+                Demo Developer apps
+              </a>
+              <!--a href="https://studio.iondv.com" class="btn btn-gray" target="_blank">
+                Studio
+              </a-->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="page-section startup">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-4">
+            <h1 class="page-title-using-for">
+              Using for
+            </h1>
+            <h2 class="section-title mt0 mb30">
+              Startup
+            </h2>
+            <div class="section-super-title mt0 mb15 fs16">
+              Turns Ideas into Work
+            </div>
+            <div class="fs15">
+              <p>
+                You want to bring your idea to life, but the lack of knowledge and professional background
+                throw up roadblocks, the <nobr>IONDV. Framework</nobr> hurries to the rescue.
+              </p><p>
+                Create, change and add the new components to reach
+                the desired goal. The opportunities are limited only by your imagination.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <ul class="numeric-list">
+              <li class="text-dark">
+
+                  <span class="num">01.</span>Low-code and free, no need registration <!--a href="https://studio.iondv.com"-->IONDV. Studio<!--/a--> to create your apps.
+
+              </li>
+              <li class="text-dark">
+                  <span class="num">02.</span>No Need for Experience to create your first app, to use and to host it on our IONDV. Cloud.
+              </li>
+              <li class="text-dark">
+                  <span class="num">03.</span><!--Large Selection of скрываем, пока не открыли Store-->Pre-made Solutions and ready <!--a href="https://iondv.com/portal/apps"-->apps  in our IONDV. Store<!--/a-->.
+              </li>
+              <li class="text-dark">
+                  <span class="num">04.</span>No Limitations in developing the additional functionality for your current and 
+                  future purposes, because of the Free and Open Source Project.
+              </li>
+              <li class="text-dark">
+                  <span class="num">05.</span>Develop your projects on your own, with freelance developers, 
+                  or with our IONDV Team. Also you can get technical <a href="<%- module %>/enterprise#support">support</a>.
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <div class="btn-list mt15">
+              <a href="https://github.com/iondv/develop-and-test" class="btn btn-gray" target="_blank"> <!-- TODO заменить на демо приложение про кошек|космолеты|CRM и т.п., а не разработческое -->
+                GitHub Demo apps
+              </a>
+              <a href="https://dnt.demo.iondv.com" class="btn btn-gray" target="_blank">
+                Demo
+              </a>
+              <!-- TODO a href="https://studio.iondv.com" class="btn btn-gray" target="_blank">
+                Studio
+              </a-->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="page-section company">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h1 class="page-title-using-for">
+              Using for
+            </h1>
+            <h2 class="section-title mt0 mb30">
+              Company
+            </h2>
+            <div class="section-super-title mb15 fs16">
+              Fits Your Projects
+            </div>
+            <p>
+              Find or create the application you need to gain more efficiencies 
+              in your company promotion with IONDV. CRM or in the project implementation 
+              with IONDV. Project Management and many others ready applications.  
+            </p>
+            <p>
+              Get extra help and advisory support with any issues with the <a href="<%- module %>/enterprise#support">Enterprise Support</a>:
+              development, infrastructure deployment, priority support and etc. 
+            </p>
+          </div>
+          <div class="col-md-5">
+            <ul class="numeric-list">
+              <li class="text-dark">
+                  <span class="num">01.</span>No payments for product license ownership and 
+                  no restrictions on upgrading any part of the system.
+              </li>
+              <li class="text-dark">
+                  <span class="num">02.</span>JavaScript is the biggest developer's community. You have choice between developers, freelancers or our IONDV
+                  <a href="<%- module %>/enterprise#development">specialists</a> to evolve your projects.
+              </li>
+              <li class="text-dark">
+                  <span class="num">03.</span>Scales from desktop apps
+                  (<a href="https://nwjs.io" target="_blank">nw.js</a>) to clustered, highload systems
+                   (Real cases: 1000+ users, 1 000 000+ records).
+                  <!-- TODO нужна подвтерждение последнему - ссылка на блок, на приложение в магазине и т.п. например ПМ или истории успеха -->
+              </li>
+              <li class="text-dark">
+                  <span class="num">04.</span>Develop and sell your products with our
+                  ready  tool for prototyping - IONDV. Studio + Cloud.
+              </li>
+              <li class="text-dark">
+                  <span class="num">05.</span> Rapid and simple migration from the legacy software applications and databases to web applications.
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <div class="btn-list mt15">
+              <a href="https://dnt.demo.iondv.com" class="btn btn-gray" target="_blank">
+                Demo
+              </a>
+              <a href="https://github.com/iondv/develop-and-test" class="btn btn-gray" target="_blank">
+                GitHub Demo apps
+              </a>
+              <!-- TODO a href="https://studio.iondv.com" class="btn btn-gray" target="_blank">
+                Studio
+              </a-->
+              <a href="<%- module %>/enterprise" class="btn btn-gray" target="_blank">
+                Enterprise support
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="page-about" class="page page-about">
+    <div class="page-section">
+      <%- partial('../parts/page-icon-tabs') %>
+    </div>
+
+  </div>
+
+  <%- partial('../parts/studio') %>
+
+  <%- partial('../parts/footer') %>
+
+</div>
+
+<%- partial('../parts/side-panel') %>
+<%- partial('../parts/getting-started') %>
+<%- partial('../parts/cookie-notify') %>

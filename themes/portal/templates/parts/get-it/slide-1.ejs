@@ -1,0 +1,261 @@
+<%
+const mod = `${module}/${portal}`;
+%>
+
+<div class="page">
+  <div class="page-content">
+
+    <div class="full-image">
+        <img src="<%- mod%>/images/gs-1.1.jpg" alt=""/>
+    </div>
+
+    <div class="page-section" id="demo">
+      <div class="container">
+        <h1 class="page-title text-orange">
+            Get started with IONDV. Framework
+        </h1>
+        <h2 class="page-section-title">
+          Typical demo applications
+        </h2>
+        <p>
+          <ul>
+            <li>
+                <strong>IONDV. DNT</strong> - is an application that represents all main features of the data maintenance
+              and the key modules.
+              <a href="#page-slider" data-slide-to="1">Read more...</a>
+            </li>
+            <li>
+              <strong>iondv.com</strong> - is one of the versions of the current site : pages, example services, and portal entities.
+              <a href="#page-slider" data-slide-to="2">Read more...</a>
+            </li>
+          </ul>
+        </p>
+
+        <h3>
+            How to start creating applications with IONDV. Framework?
+        </h3>
+        <h4>
+            Follow the steps:
+        </h4>
+        <p>
+          <ol> 
+            <li>Install the system environment and global dependencies</li>
+            <li>Get the framework and modules</li>
+            <li>Create your application</li>
+            <li>Build and deploy</li>
+            <li>Start </li>
+          </ol>
+
+          You can develop your application using the
+          <a href="https://studio.iondv.com" target="_blank">IONDV. Studio</a> or get the application metadata from the
+          <a href="https://github.com/topics/iondv-app" target="_blank">GitHub repository</a> or get
+          the <a href="https://cloud.docker.com/u/iondv/repository/list" target="_blank">docker container</a>.
+          After receiving an archive with metadata or a link to the repository, you can deploy it using one
+          of the following methods.
+        </p>
+      </div>
+    </div>
+
+    <div class="page-section light-gray" id="git">
+      <div class="container">
+        <h2 class="page-section-title">
+          Git 
+        </h2>
+        <h4>
+          Follow the steps:
+        </h4>
+        <p>
+          <ol>
+            <li>Install globally the system environment and global dependencies.
+        <p>
+        <ul>
+          <li><a href="https://nodejs.org/en/">Node.js runtime</a></li>
+          <li><a href="https://www.mongodb.org">MongoDB</a></li>
+          <li><a href="https://github.com/nodejs/node-gyp">node-gyp package</a></li>
+          <li><a href="http://gulpjs.com">Gulp installation package</a></li>
+          <li><a href="https://bower.io">Bower package manager of frontend libraries</a></li>
+        </ul>
+        </p>
+        </li>
+        <li>Check out the core, modules and application. The dependencies are listed in the "package.json" file of the application.</li>
+        </p>
+        <p>Install the core, its version is specified in the "engines": "ion": 1.24.1 parameter.
+          Copy the URL of the core repository and execute the command <code>git clone https://github.com/iondv/framework.git dnt</code>, 
+          where <code>dnt</code> is an application name, for example full path is /workspace/dnt'.
+          Go to the core folder and switch the tag of the version number <code>git checkout tags/3.0.0</code>.
+        </p>
+        <p>Further, install the modules listed in the ionModulesDependencies parameter.
+          Navigate to the module folder executing the <code>cd modules</code> command. Clone modules from the ionModulesDependencies list,
+          for the registry module the command is <code>git clone https://github.com/iondv/registry.git</code>.
+          Go to the folder of the installed module and switch the tag of the version number <code>git checkout tags/2.0.0</code>.
+          Repeat for each module.
+        </p>
+        <p>To install the application, To install the application, go to the application folder executing the <code>cd ..\applications</code> command, if you're in the module folder.<br>
+          Clone the path to repository by <code>git clone git clone https://github.com/iondv/develop-and-test.git</code> command.
+          Go to the folder of installed application and switch the tag of the version number <code>git checkout tags/1.17.0</code>.
+        </p>
+        <p>Finally, install all necessary applications listed in the ionMetaDependencies parameter in the applications folder.
+          Make sure that you're inside this folder. Clone the dependencies from the ionMetaDependencies, in particularly viewlib - a library of views.
+          Execute the <code>git clone https://github.com/iondv/viewlib.git</code> to clone to the applications folder.
+          Go to the folder of installed application and switch to the tag of the version.</li>
+        </p>
+        <p>
+        <li>Build the application.
+          Create the configuration file "setup.ini" in the config folder of the core to set the main parameters of the application environment.</p>
+        <pre class="code">
+auth.denyTop=false
+auth.registration=false
+auth.exclude[]=/files/**
+auth.exclude[]=/images/**
+db.uri=mongodb://127.0.0.1:27017/iondv-dnt-db
+server.ports[]=8888
+module.default=registry
+fs.storageRoot=./files
+fs.urlBase=/files</pre>
+
+        <p>
+          Open the file and paste the text above. The DB will be created automatically.<br></p>
+        <p>
+          Set the NODE_PATH environment variable which is equal to the path of the application core.
+          For Windows the command is <code>set NODE_PATH=c:\workspace\dnt</code>, for Linux - <code>export NODE_PATH=/workspace/dnt</code>. The workspace is the directory of the application.</p>
+
+        <p>
+          The <code>npm install</code> installs all key dependencies, including locally the gulp build-tool.
+          Please make sure that the Gulp version - is 4.0.
+        </p>
+
+        <p>Further, execute the <code>gulp assemble</code> command to build the application.
+        </p>
+        <p>
+        <li>Run the app, executing the <code>npm start</code> or <code>node bin/www</code> command. Open this link "http://localhost:8888" in a browser and log in. 8888 —  is a port in the server.ports parameter.</li>
+        </p>
+        <p>
+        <li>Add the admin user with the 123 password executing the <code>node bin/adduser.js --name admin --pwd 123</code> command.Add admin rights to the user executing the <code>node bin/acl.js --u admin@local --role admin --p full</code> command.</li>
+        </p>
+        </ol>
+      </div>
+    </div>
+
+    <div class="page-section" id="docker">
+      <div class="container">
+        <h2 class="page-section-title">
+          Docker
+        </h2>
+        <p>
+          You can run ready-to-use applications by Docker.
+          Follow these steps to deploy docker container on the example of the develop-and-test application:
+        </p>
+        <h4>
+          Follow the steps:
+        </h4>
+        <ol>
+          <li>Go to <a href="https://hub.docker.com/u/iondv">IONDV Docker hub</a></li>
+          <li>Choose your application, for example <code>iondv/dnt</code></li>
+          <li>Run mongodb
+<pre class="code">
+docker run  --name mongodb \
+            -v mongodb_data:/data/db \
+            -p 27017:27017 \
+            --restart unless-stopped \
+            -d \
+            mongo</pre></li>
+
+
+          <li>Deploy your app (iondv/dnt) and additional applications (for example viewlib)
+            <pre class="code">
+docker run --entrypoint="" --link mongodb --rm iondv/dnt node bin/import --src ./applications/develop-and-test --ns develop-and-test
+docker run --entrypoint="" --link mongodb --rm iondv/dnt node bin/setup develop-and-test --reset
+docker run --entrypoint="" --link mongodb --rm iondv/dnt node bin/setup viewlib</pre></li>
+          <li>Create  <code>admin</code> user with password  <code>123</code> and <code>admin</code> role
+            <pre class="code">
+docker run --entrypoint="" --link mongodb --rm iondv/dnt node bin/adduser --name admin --pwd 123
+docker run --entrypoint="" --link mongodb --rm iondv/dnt node bin/acl --u admin@local --role admin --p full</pre></li>
+          <li> Start application <code>docker run -d -p 80:8888 --name dnt --link mongodb iondv/dnt</code></li>
+          <li>Open <code>http://localhost/</code> in your browser.</li>
+        </ol>
+
+      </div>
+    </div>
+    <div class="page-section light-gray"  id="zip">
+      <div class="container">
+        <h2 class="page-section-title">
+          Zip
+        </h2>
+        <p>
+          We have prepared for you a zip archive with our IONDV. Framework: the core, modules and the <a href="https://iondv.com/iondv-files/iondv-dnt.zip">develop-and-test application</a>.
+        </p>
+        <h4>
+          Follow the steps
+        </h4>
+        <ol>
+          <p>
+          <li>Install globally the system environment and global dependencies.</li>
+          </p>
+          <p><li>Unpack the zip file to get the core, the dnt application and the modules.</li>
+          </p>
+          <p>
+          <li>Build the application.</li><br>
+          Create the configuration file "setup.ini" in the config folder of the core to set the main parameters of the application environment.
+          </p>
+          <pre class="code">
+auth.denyTop=false
+auth.registration=false
+auth.exclude[]=/files/**
+auth.exclude[]=/images/**
+db.uri=mongodb://127.0.0.1:27017/iondv-dnt-db
+server.ports[]=8888
+module.default=registry
+fs.storageRoot=./files
+fs.urlBase=/files</pre>
+          <p>
+            Open the file and paste the text above. The DB will be created automatically.<br></p>
+          <p>
+            Set the NODE_PATH environment variable which is equal to the path of the application core.
+            For Windows the command is <code>set NODE_PATH=c:\workspace\dnt</code>, for Linux - <code>export NODE_PATH=/workspace/dnt</code>. The workspace is the directory of the application.</p>
+
+          <p>
+            The <code>npm install</code> installs all key dependencies, including locally the gulp build-tool.
+            Please make sure that the Gulp version - is 4.0. Import the application meta with the command - <code>node bin\import --src C:\workspace\framework\applications\dnt_en --ns develop-and-test</code>.</p>
+
+          <p>Further, execute the <code>gulp assemble</code> command to build the application.
+          </p>
+          <p>
+          <li>Run the app, executing the <code>npm start</code> or <code>node bin/www</code> command. Open this link "http://localhost:8888" in a browser and log in. 8888 —  is a port in the server.ports parameter.</li>
+          </p>
+          <p>
+          <li>Add the admin user with the 123 password executing the <code>node bin/adduser.js --name admin --pwd 123</code> command.Add admin rights to the user executing the <code>node bin/acl.js --u admin@local --role admin --p full</code> command.</li>
+          </p>
+        </ol>
+      </div>
+    </div>
+
+
+
+    <div class="page-section" id="studio">
+      <div class="container">
+        <h2 class="page-section-title">
+          Studio
+        </h2>
+        <p>
+          You can use Studio to develop applications based on IONDV. Framework.
+        </p>
+        <h4>
+          Follow the steps:
+        </h4>
+        <ol>
+          <li>Go to <a href="https://studio.iondv.com">studio.iondv.com</a> or build
+            <a href="https://github.com/iondv/studio">IONDV. Studio</a> localy as an application from GitHub repository</li>
+          <li>Get the last version of the IONDV core and the registry module: check out from GitHub
+            <a href="https://github.com/iondv/framework">Framework</a> and <a href="https://github.com/iondv/registry">Registry</a>
+            repositories.
+          </li>
+          <li>
+              Build and deploy your application as typical <a href="https://github.com/iondv/framework">IONDV. Framework</a> application by changing or adding the additional components<br>
+          </li>
+
+        </ol>
+
+      </div>
+    </div>
+  </div>
+</div>

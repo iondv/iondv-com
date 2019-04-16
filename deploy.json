@@ -1,0 +1,169 @@
+{
+  "namespace": "iondv-framework",
+  "globals": {
+    "pageTitle": "IONDV. Framework",
+    "pageEndContent": "<div><img src=\"https://mc.iondv.com/watch/github/app/iondv-com\" style=\"position:absolute; left:-9999px;\" alt=\"iondv-metrics\" /></div>",
+    "staticOptions": {
+      "maxAge": 3600000
+    },
+    "moduleTitles": {
+      "registry": {
+        "description": "Registry",
+        "order": 10
+      },
+      "ionadmin": {
+        "description": "Admin",
+        "order": 20
+      },
+      "portal": {
+        "description": "Portal",
+        "order": 40
+      }
+    },
+    "plugins": {
+      "htmlFiles": {
+        "module": "core/impl/resource/FsStorage",
+        "initMethod":"init",
+        "initLevel": 3,
+        "options": {
+          "storageBase": "./htmlFiles",
+          "urlBase": "/htmlFiles",
+          "dataSource": "ion://Db",
+          "log": "ion://sysLog",
+          "app": "ion://application",
+          "auth": "ion://auth"
+        }
+      },
+      "imageStorage": {
+        "module": "core/impl/resource/ImageStorage",
+        "initMethod": "init",
+        "initLevel": 3,
+        "options": {
+          "fileStorage": "ion://htmlFiles",
+          "app": "ion://application",
+          "auth": "ion://auth",
+          "log": "ion://sysLog",
+          "urlBase": "/htmlFiles",
+          "thumbnails": {
+            "small": {
+              "width": 750,
+              "height": 750
+            }
+          }
+        }
+      }
+    }
+  },
+  "deployer": "built-in",
+  "modules": {
+    "registry": {
+      "globals": {
+        "defaultPath": "iondv-framework@product",
+        "navigation": {
+          "namespaces": {
+            "iondv-framework": "Registy"
+          },
+          "menus": {
+            "left": [
+              "appStore",
+              "blog"
+            ]
+          }
+        }
+      }
+    },
+    "rest": {
+      "globals": {
+        "refShortViewDelay": 1000,
+        "defaultImageDir": "images",
+        "contentImageStorage": "htmlImages",
+        "di": {
+          "createProduct": {
+            "module": "applications/iondv-framework/service/createProduct",
+            "options": {
+              "className": "product@iondv-framework",
+              "dataRepo": "ion://dataRepo",
+              "imgStorage": "ion://imageStorage",
+              "metaRepo": "ion://metaRepo"
+            }
+          }
+        }
+      }
+    },
+    "portal": {
+      "import" : {
+        "src": "applications/iondv-framework/portal",
+        "namespace": "iondv-framework"
+      },
+      "globals": {
+        "env": {
+          "exportAppServiceUrl": ""
+        },
+        "portalName": "iondv-framework",
+        "default": "index",
+        "theme": "iondv-framework/portal",
+        "templates": [
+          "applications/iondv-framework/themes/portal/templates"
+        ],
+        "statics": {
+          "iondv-framework": "applications/iondv-framework/themes/portal/static"
+        },
+        "pageTemplates": {
+          "navigation": {
+            "index": "pages/index",
+            "privacy": "pages/privacy",
+            "get-it": "pages/get-it",
+            "enterprise": "pages/enterprise",
+            "cookie-agreement": "pages/cookie-agreement"
+          },
+          "resources": {
+            "services": "iondv_blog",
+            "products": "iondv_app"
+          },
+          "errors": {
+            "404": "404"
+          }
+        },
+        "di": {
+          "blogController":{
+            "module": "applications/iondv-framework/portal/controllers/BlogController",
+            "initMethod": "init",
+            "initLevel": 0,
+            "options": {
+              "module": "ion://module",
+              "sysLog": "ion://sysLog"
+            }
+          },
+          "provider":{
+            "options": {
+              "adapters": {
+                "blog": {
+                  "name": "blog",
+                  "module":"applications/iondv-framework/portal/adapters/BlogAdapter",
+                  "options": {
+                    "dataRepo": "ion://dataRepo",
+                    "className": "blog@iondv-framework"
+                  }
+                }
+              }
+            }
+          },
+          "product": {
+            "module": "modules/portal/lib/impl/adapter/ClassAdapter",
+            "options": {
+              "dataRepo": "ion://dataRepo",
+              "className": "product@iondv-framework",
+              "map": {
+                "title": "name",
+                "content": "about"
+              },
+              "forceEnrichment": {
+                "item": [["developer"], ["minimalRequieres"]]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

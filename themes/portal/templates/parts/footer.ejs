@@ -1,0 +1,90 @@
+<%
+const mod = `${module}/${portal}`;
+%>
+<footer id="footer">
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-3">
+        <h4 class="letter-spacing-1">
+          TEAM
+        </h4>
+        <p>
+          We are the IONDV Team – a community of smart, dedicated and creative individuals with a big experience
+          implementing the largest projects in the Russian Far East. Together we speed up production, freeing
+          developers to grow, discover and change the world for the better.
+        </p>
+      </div>
+      <div class="col-md-3">
+        <h4 class="letter-spacing-1">
+          FOLLOW US
+        </h4>
+          <ul class="list-unstyled">
+            <li><a href="https://www.facebook.com/iondv"><i class="fab fa-facebook-square"></i> Facebook</a></li>
+            <li><a href="https://www.linkedin.com/company/iondv/"><i class="fab fa-linkedin"></i> Linkedin</a></li>
+            <li><a href="https://vk.com/iondv"><i class="fab fa-vk"></i> Vkontakte</a></li>
+            <li><a href="https://www.instagram.com/iondv/"><i class="fab fa-instagram"></i> Instagram</a></li>
+            <li><a href="https://twitter.com/ion_dv"><i class="fab fa-twitter-square"></i> Twitter</a></li>
+            <li><a href="https://t.me/iondv"><i class="fab fa-telegram"></i> Telegram</a></li>
+            <!--li><a href="https://www.youtube.com/iondv"><i class="fab fa-youtube-square"></i> Watch videos</a></li-->
+            <li><a href="https://github.com/iondv/"><i class="fab fa-github-square"></i> Get source code</a></li>
+            <li><a href="https://cloud.docker.com/u/iondv/"><i class="fab fa-docker"></i> Docker hub</a></li>
+            <li><a href="https://stackoverflow.com/questions/tagged/iondv"><i class="fab fa-stack-overflow"></i> Ask questions</a></li>
+          </ul>
+      </div>
+
+      <div class="col-md-3">
+
+        <h4 class="letter-spacing-1">
+          SITE STRUCTURE
+        </h4>
+        <ul class="footer-links list-unstyled">
+          <li> <a href="<%- module %>/index#page-about">About</a></li>
+          <li><a href="<%- module %>/index#page-try">Try</a></li>
+          <li><a href="<%- module %>/blog">Blog</a></li>
+          <li><a href="<%- module %>/enterprise">Enterprise</a></li>
+        </ul>
+        <!-- /Links -->
+
+      </div>
+      <div class="col-md-3">
+        <h4 class="letter-spacing-1">
+          IONDV ENTERPRISE
+        </h4>
+        <p style="font-size: 0.8em;">
+          IONDV Enterprise support provides a range of expert services and quality tools, including the technical
+          support that guarantees you the access to the professionals who developed  IONDV. Framework and who continue
+          developing applications on its basis.
+        </p>
+        <p>
+        <ul class="footer-links list-unstyled">
+          <li ><a href="<%- module %>/enterprise">Enterprise support and services</a></li>
+          <li>
+            <script>String.prototype.ionprn =
+            function (_hamper,_prefix,_postfix,_face)
+            {_hamper=_prefix+
+            "@"+ this +
+            (_postfix || '')
+            document.write((_face||_hamper).link("mailto:"+_hamper));
+            }</script>
+            <noscript>inf</noscript><script>"ion".ionprn('blank', 'info', 'dv.com', 'Contact us... ');</script><noscript>fo<!--blablabla--><span>&#64;</span>iondv.com</noscript>
+          </li>
+        </ul>
+
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    <div class="container">
+      <ul class="pull-right nomargin list-inline mobile-block">
+        <li><a href="<%- module %>/privacy">Privacy and Terms of Use</a></li>
+      </ul>
+      Powered by IONDV.Framework &nbsp; &nbsp;&nbsp;&nbsp; © Copyright 2019 ION DV LLC 
+    </div>
+  </div>
+</footer>

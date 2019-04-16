@@ -1,0 +1,87 @@
+
+<div class="studio-toolbar">
+
+  <!--
+  <div class="toolbar-section" data-id="app">
+    <label class="l10n" data-action="appLabel">
+      Application
+    </label>
+
+    <select class="form-control" data-action="selectApp">
+    </select>
+
+    <button class="btn btn-default" title="Create application" data-action="createApp">
+      <span class="fa fa-plus"></span>
+    </button>
+    <button class="btn btn-default" title="Edit application" data-action="updateApp"
+            data-select-message="Select application to edit">
+      <span class="fa fa-edit"></span>
+    </button>
+    <button class="btn btn-default" title="Remove application" data-action="removeApp"
+            data-select-message="Select application to remove"
+            data-confirm-message="Remove application?">
+      <span class="fa fa-trash"></span>
+    </button>
+
+  </div>
+  -->
+
+  <div class="toolbar-section" data-id="class">
+    <label class="l10n hidden" data-action="classLabel">Class</label>
+    <button class="btn btn-default" title="Create class" data-action="createClass">
+      <span class="fa fa-plus"></span>
+      Class
+    </button>
+    <button class="btn btn-default" title="Edit class" data-action="updateClass"
+            data-select-message="Select class to edit">
+      <span class="fa fa-edit"></span>
+    </button>
+    <button class="btn btn-default" title="Remove class" data-action="removeClass"
+            data-select-message="Select class to remove"
+            data-confirm-message="Remove class?">
+      <span class="fa fa-trash"></span>
+    </button>
+  </div>
+
+  <div class="toolbar-section" data-id="classAttr">
+    <label class="l10n hidden" data-action="attrLabel">Attribute</label>
+    <button class="btn btn-default" title="Create attribute" data-action="createClassAttr">
+      <span class="fa fa-plus"></span>
+      Attribute
+    </button>
+    <button class="btn btn-default" title="Edit attribute" data-action="updateClassAttr"
+            data-select-message="Select attribute to edit">
+      <span class="fa fa-edit"></span>
+    </button>
+    <button class="btn btn-default" title="Remove attribute" data-action="removeClassAttr"
+            data-select-message="Select attribute to remove"
+            data-confirm-message="Remove class attribute?">
+      <span class="fa fa-trash"></span>
+    </button>
+  </div>
+
+
+  <div class="toolbar-section pull-right mr0 ml10" data-id="external">
+    <button class="btn btn-default" title="Help" data-action="help">
+      <span class="fa fa-question"></span>
+    </button>
+  </div>
+
+  <div class="toolbar-section pull-right mr0 ml10" data-id="exportApp">
+    <!--button class="btn btn-default text-orange" title="Export to service" data-action="exportApp">
+      <span class="fa fa-play"></span>
+    </button-->
+    <button class="btn btn-default" title="Download application" data-action="downloadApp"
+            data-select-message="Select an application to download">
+      <span class="glyphicon glyphicon-save"></span>
+    </button>
+    <input type="file" class="upload-app-file hidden" accept=".zip">
+  </div>
+
+  <div class="toolbar-section pull-right mr0" data-id="util">
+    <button class="btn btn-default" title="Auto alignment" data-action="alignClasses">
+      <span class="fa fa-th"></span>
+    </button>
+  </div>
+
+</div>
